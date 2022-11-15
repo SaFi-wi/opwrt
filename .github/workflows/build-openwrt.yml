@@ -60,6 +60,7 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        rm -rf openwrt/package/network/services/samba36
         cd openwrt/target/linux/ramips/patches-5.4
         rm -rf 102-mt7621-fix-cpu-clk-add-clkdev.patch
         wget https://github.com/SaFi-wi/immortalwrt/raw/openwrt-18.06-k5.4/target/linux/ramips/patches-5.4/102-mt7621-fix-cpu-clk-add-clkdev.patch
