@@ -107,6 +107,8 @@ jobs:
     - name: Compile the firmware
       id: compile
       run: |
+        rm -rf openwrt/target/linux/ipq60xx/patches-5.15/0006-v5.16-arm64-dts-qcom-Fix-IPQ8074-PCIe-PHY-nodes.patch
+        rm -rf openwrt/target/linux/ipq60xx/patches-5.15/0110-arm64-dts-ipq8074-fix-PCI-related-DT-nodes.patch
         cd openwrt
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 || make -j1 V=s
