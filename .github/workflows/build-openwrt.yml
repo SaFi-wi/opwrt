@@ -11,6 +11,8 @@
 name: Build OpenWrt
 
 on:
+  braches:
+    - master
   repository_dispatch:
   workflow_dispatch:
     inputs:
