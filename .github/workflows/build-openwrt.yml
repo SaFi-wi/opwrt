@@ -13,7 +13,7 @@ name: Build OpenWrt
 on:
   push:
     branches:
-      - default
+      - main
   repository_dispatch:
   workflow_dispatch:
     inputs:
