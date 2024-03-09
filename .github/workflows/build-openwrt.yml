@@ -77,12 +77,12 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
-    - name: use golang 1.18
-      run:  |
-        cd openwrt
-        ./scripts/feeds update packages
-        rm -rf feeds/packages/lang/golang
-        svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
+    #- name: use golang 1.18
+    #  run:  |
+    #   cd openwrt
+    #  ./scripts/feeds update packages
+    #  rm -rf feeds/packages/lang/golang
+    #  svn co https://github.com/openwrt/packages/branches/openwrt-23.05/lang/golang feeds/packages/lang/golang
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
